@@ -5,7 +5,7 @@ subtitle: '纪念第一次博客更新'
 date: 2017-11-1
 categories: 随笔
 cover: '/assets/img/IMG_2934.jpg'
-tags:GitHub
+tags: GitHub
 ---
 
 > Transform your plain text into static websites and blogs.
@@ -14,7 +14,7 @@ tags:GitHub
 
 第一次建立个人主页，也是第一次更新博客，这个独立博客的生日和我的生日一样是11月1日！
 
-本博客主题来自于 [悟空]https://github.com/kaeyleo 的jekyll主题[H2O]https://github.com/kaeyleo/jekyll-theme-H2O
+本博客主题来自于 [悟空](https://github.com/kaeyleo) 的jekyll主题[H2O](https://github.com/kaeyleo/jekyll-theme-H2O)
 
 ---
 ### 想做的事
