@@ -4,7 +4,7 @@ title: '生日快乐！'
 subtitle: '纪念第一次博客更新'
 date: 2017-11-1
 categories: 随笔
-cover: '/assets/img/IMG_2934.jpg'
+cover: '/assets/img/IMG_2934.JPG'
 tags: GitHub
 ---
 
@@ -14,7 +14,7 @@ tags: GitHub
 
 第一次建立个人主页，也是第一次更新博客，这个独立博客的生日和我的生日一样是11月1日！
 
-本博客主题来自于 [悟空](https://github.com/kaeyleo) 的jekyll主题[H2O](https://github.com/kaeyleo/jekyll-theme-H2O)
+本博客主题来自于 [悟空]（https://github.com/kaeyleo） 的jekyll主题[H2O]（https://github.com/kaeyleo/jekyll-theme-H2O）
 
 ---
 ### 想做的事
@@ -33,7 +33,7 @@ tags: GitHub
 ##【软件】
 
 目前来说还是专注与学习，不过个人对软件情有独钟，在近期的课程中学了不少新软件的使用，学习的心得做成教程的模式，既可以督促自己学习，还可以分享交流
-# 软件包括：
+### 软件包括：
 - Matlab 矩阵实验室
 - Multisim 电路仿真
 - AutoCad 制图
@@ -43,7 +43,7 @@ tags: GitHub
 ## 【小说】
 
 本人的小爱好就是平时写写科幻小说啦，在脑中模拟人物各自的命运可以让路上变得不那么无聊，偶尔更新一下小说，但是会持续断更很长时间就是了
-# 计划更新的小说：
+### 计划更新的小说：
 - 《彤熵效应》
 - 《血与油》
 - 《Azul魔法世界》
