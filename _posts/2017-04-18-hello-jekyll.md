@@ -4,11 +4,11 @@ title: '生日快乐！'
 subtitle: '纪念第一次博客更新'
 date: 2017-11-1
 categories: 随笔
-cover: '/assets/img/IMG_2934.JPG'
+cover: '/assets/img/yangxiao.jpg'
 tags: GitHub
 ---
 
-> Transform your plain text into static websites and blogs.
+
 
 ## 这是我的第一个博文
 
