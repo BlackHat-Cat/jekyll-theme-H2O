@@ -1,6 +1,6 @@
 # 黑猫帽子猫的独立博客
 
-[黑猫子猫](http://blackhat.github.io)
+[黑猫子猫](http://blackhat-cat.github.io)
 
 > 于平凡之处起波澜，于细微之处建高楼
 
