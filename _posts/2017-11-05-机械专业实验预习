@@ -1,0 +1,109 @@
+---
+layout: post
+title: '微机原理（一）'
+subtitle: 'Keil C51集成开发环境练习'
+date: 2017-11-05
+categories: Keil
+cover: '/assets/img/企鹅.jpg'
+tags: 软件
+---
+
+
+
+# 实验1-20171103预习
+
+1. 启动Keil
+2. 新建工程
+  - 在非系统盘如D盘建立一个你学号的目录 如`D:\094xxx`
+  - Project（工程）-->new uVisionProject(新建工程)
+  - 把保存目录设定为`D:\0946xxx`，并指定工程名
+  - 选择芯片Philips（P80/P87C52x2）
+  - copy Startup.a51对话框，选否
+  - 点file（文件）-new（新建）--> file（文件）-Save as（另存为），设定文件名如`111.asm`，扩展名必须为.asm`
+  - 点击左侧project窗口的Target1，看到source grouop1-->在上面右击鼠标Add file to，选择你刚才命名的文件`111.asm`
+  - Project-->option for target ‘target1’-->output页勾上 output hexfile
+  - debug页面勾选use simulator
+
+3. 输入程序
+
+```
+ORG 0000H
+LJMP MAIN
+
+ORG 30H
+MAIN:              //假设为110946356，把下面学号替换为你自己的学号
+MOV 11H,#1;  学号第1位
+MOV 12H,#1;  学号第2位
+MOV 13H,#0;  学号第3位
+MOV 14H,#9
+MOV 15H,#4
+MOV 16H,#6
+MOV 17H,#3
+MOV 18H,#5;学号第8位
+MOV 19H,#6;学号第9位
+
+MOV R7, #9 ;;循环次数 也就学号长度
+MOV R0, #11H;; 数据首地址  
+MOV R1, #40H;; 目标首地址  1
+MOV DPTR,#10H ;; 目标首地址 2
+LOOP:
+MOV  A, @R0
+MOV  @R1,  A
+RL A
+MOVX  @DPTR, A
+INC R0
+INC R1
+INC DPTR
+DJNZ R7,LOOP;;
+
+SETB RS1
+CLR RS0
+HERE:  MOV P1, R1
+SJMP $
+END
+
+```
+
+4. 编译
+  - project –》build target（F7），直到提示0 error 并生成Hex文件 *常见错误中文字符标点，0与O不分，1和l不分*
+5. 调试
+  - debug-->菜单第一项Start/stop debug session， 按F10单步调试，查看寄存器和ram数据变化
+
+> 单片机复位是什么状态？执行时候pc，a，psw怎么变化的？
+
+## 思考题：
+1. 把程序汇编后的代码抄到实验报告上，指出每条指令使用的寻址方式，并列出没有用到的寻址方式。
+
+
+|  首地址   | 指令机器码 |指令          |
+| -------- |:--------:|--------------|
+|0000      |02 00 30  |LJMP MAIN   |    
+|          |          |ORG 30H
+|          |          |MAIN：
+| 0030     |75 11 01  |MOV 11H, 0x01    
+| …        |      …   |        …
+| 0063     |80 FE     |         SJMP $    
+
+
+
+2. 在DJNZ R7,LOOP;;添加断点，分析执行前后DJNZ R7,LOOP时 R7值
+3. 查看汇编DJNZ R7,LOOP;; 分析执行该条指令时PC值是多少，rel偏移值是多少，合成跳转地址是？
+4. 查看地址片内11H开始九个单元内容，片内40H开始九个单元内容，片外10H开始9字节内容
+5. 执行到SJMP $是检查P1的值，为什么是这个值？此时R2-R7值分别是多少？
+6. 这个程序到底都实现了什么功能？
+7. 试写程序把片内 RAM 50H~59H 单元写入 01H开始的单元的程序，你能调通？
+8. 如果要把学号各个位数的平方转存到40H开始的单元？如何实现？
+
+
+
+## Tips:
+
+**添加删除断点：** 在asm文件左侧空白条上点击鼠标，添加删除断点
+
+**查看 内ram 10H开始字节内容：**  memory窗口 输入 D:10H
+
+**查看 外ram 10H开始字节内容：** memory窗口 输入 X:10H
+
+**查看 rom 10H开始字节内容：** memory窗口 输入 C:10H
+
+**查看端口值** 点击Peripherals->I/O-Ports->Port 1打开 可以看P1值

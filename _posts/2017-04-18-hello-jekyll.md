@@ -4,7 +4,7 @@ title: '生日快乐！'
 subtitle: '纪念第一次博客更新'
 date: 2017-11-1
 categories: 随笔
-cover: '/assets/img/yangxiao.jpg'
+cover: '/assets/img/lanniao.jpg'
 tags: GitHub
 ---
 
