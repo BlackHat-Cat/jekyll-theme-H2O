@@ -2,7 +2,7 @@
 layout: post
 title: '生日快乐！'
 subtitle: '纪念第一次博客更新'
-date: 2017-11-1
+date: 2017-11-01
 categories: 随笔
 cover: '/assets/img/lanniao.jpg'
 tags: GitHub
