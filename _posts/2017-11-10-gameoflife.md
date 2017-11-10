@@ -2,9 +2,9 @@
 layout: post
 title: '生命游戏'
 subtitle: 'Unity游戏开发心得'
-date: 2017-11-05
+date: 2017-11-10
 categories: Unity3d
-cover: '/assets/img/企鹅.jpg'
+cover: '/assets/img/lang.jpg'
 tags: 游戏
 ---
 # 生命游戏
