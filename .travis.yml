@@ -3,3 +3,4 @@ node_js:
   - "iojs"
   - "7"
 os: osx
+osx_image: xcode9
