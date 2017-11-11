@@ -4,3 +4,9 @@ node_js:
   - "7"
 os: osx
 osx_image: xcode9
+
+before_install:
+- brew install git-lfs
+
+before_script:
+- git lfs pull
